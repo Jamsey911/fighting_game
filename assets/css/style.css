@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.large-red-container {
+    position: relative;
+    display: inline-block;
+}
+
+.small-red-container{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.health {
+    background-color: yellow;
+    height: 30px;
+    width: 100px;
+    width: 100%;
+}
+
+.timer {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+
+}
