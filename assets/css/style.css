@@ -15,10 +15,40 @@
     padding: 20px;
 }
 
-.health {
+.health-container {
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.health-bar {
     background-color: yellow;
     height: 30px;
-    width: 100px;
+}
+
+.health-player {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.health-bar-player {
+    width: 100%;
+}
+
+
+.health-bg {
+    position: absolute;
+    background: blue;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.health-bg-enemy {
+    left: 0;
+}
+
+.health-bg-player {
     width: 100%;
 }
 

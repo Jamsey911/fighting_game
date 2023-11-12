@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     
     <!-- Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -18,11 +17,17 @@
         <!-- Small red container -->
         <div class="small-red-container">
             <!-- Player health -->
-            <div class="health"></div>
+            <div class="health-container health-player">
+                <div class="health-bar health-bar-player"></div>
+                <div id="playerHealth" class="health-bg health-bg-player"></div>
+            </div>
             <!-- Timer -->
             <div class="timer" ></div>
             <!-- Enemy Health -->
-            <div class="health"></div>
+            <div class="health-container">
+                <div class="health-bar"></div>
+                <div id="enemyHealth" class="health-bg health-bg-enemy"></div>
+            </div>
         </div>
         <canvas class="canvas" style="background-color: brown;"></canvas>
     </div>
