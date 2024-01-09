@@ -45,7 +45,46 @@ const player = new Fighter({
     imageSrc: './assets/img/samuraiMack/Idle.png',
     framesMax: 8,
     scale: 2.5,
-    offset: {x: 215, y: 157}
+    offset: {x: 215, y: 157},
+    sprites: {
+        idle: {
+            imageSrc: './assets/img/samuraiMack/Idle.png',
+            framesMax: 8
+        },
+        run: {
+            imageSrc: './assets/img/samuraiMack/Run.png',
+            framesMax: 8
+        }
+        // ,
+        // jump: {
+        //     imageSrc: './assets/img/samuraiMack/Jump.png',
+        //     framesMax: 2
+        // },
+        // fall: {
+        //     imageSrc: './assets/img/samuraiMack/Fall.png',
+        //     framesMax: 2
+        // },
+        // attack1: {
+        //     imageSrc: './assets/img/samuraiMack/Attack1.png',
+        //     framesMax: 6
+        // },
+        // takeHit: {
+        //     imageSrc: './assets/img/samuraiMack/Take Hit - white silhouette.png',
+        //     framesMax: 4
+        // },
+        // death: {
+        //     imageSrc: './assets/img/samuraiMack/Death.png',
+        //     framesMax: 6
+        // }
+      },
+      attackBox: {
+        offset: {
+          x: 100,
+          y: 50
+        },
+        width: 160,
+        height: 50
+      }
 })
 
 const enemy = new Fighter({
@@ -99,10 +138,13 @@ function animate() {
     enemy.velocity.x = 0
 
     //Player Movement
+    player.image = player.sprites.idle.image
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
+        player.image = player.sprites.run.image
     } else if (keys.d.pressed && player.lastKey === 'd'){
         player.velocity.x = 5
+        player.image = player.sprites.run.image
     }
 
     //Enemy Movement
