@@ -56,12 +56,12 @@ const player = new Fighter({
         jump: {
             imageSrc: './assets/img/samuraiMack/Jump.png',
             framesMax: 2
+        },
+        fall: {
+            imageSrc: './assets/img/samuraiMack/Fall.png',
+            framesMax: 2
         }
         // ,
-        // fall: {
-        //     imageSrc: './assets/img/samuraiMack/Fall.png',
-        //     framesMax: 2
-        // },
         // attack1: {
         //     imageSrc: './assets/img/samuraiMack/Attack1.png',
         //     framesMax: 6
@@ -148,6 +148,8 @@ function animate() {
     // jumping
     if (player.velocity.y < 0) {
         player.switchSprite('jump')
+    } else if (player.velocity.y > 0) {
+        player.switchSprite('fall')
     }
 
     //Enemy Movement
